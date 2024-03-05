@@ -1,0 +1,22 @@
+CREATE TABLE `tcmb_rate` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `rate_date` datetime DEFAULT NULL,
+  `currency_type` tinyint(3) unsigned DEFAULT '0' COMMENT 'Language:Para Birimi,Currency Type#EnumNames:CurrencyType=USD,Dolar;TL,Türk Lirası;EUR,Euro',
+  `unit` int(10) unsigned DEFAULT NULL,
+  `forex_buying` decimal(10,6) unsigned DEFAULT NULL,
+  `forex_selling` decimal(10,6) unsigned DEFAULT NULL,
+  `banknote_buying` decimal(10,6) unsigned DEFAULT NULL COMMENT 'Language:Alış Fiyatı,Banknote Buying',
+  `banknote_selling` decimal(10,6) unsigned DEFAULT NULL,
+  `is_deleted` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT 'Language:Durum,Status#EnumNames:Status=ACTIVE,Aktif;DELETED,Silinmiş;PASSIVE,Pasif',
+  `base_created_date` datetime DEFAULT NULL,
+  `is_locked` tinyint(1) NOT NULL DEFAULT '0',
+  `created_at` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `updated_at` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `created_by` bigint(20) unsigned NOT NULL DEFAULT '58',
+  `updated_by` bigint(20) unsigned NOT NULL DEFAULT '58',
+  PRIMARY KEY (`id`),
+  KEY `fk_tcmb_rate_created_by_personnel_id` (`created_by`),
+  KEY `fk_tcmb_rate_updated_by_personnel_id` (`updated_by`),
+  CONSTRAINT `fk_tcmb_rate_created_by_personnel_id` FOREIGN KEY (`created_by`) REFERENCES `authorization`.`personnel` (`id`),
+  CONSTRAINT `fk_tcmb_rate_updated_by_personnel_id` FOREIGN KEY (`updated_by`) REFERENCES `authorization`.`personnel` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=29466 DEFAULT CHARSET=utf8 COMMENT='Merkez Bankası Oranı,Central Bank Rate';
