@@ -1,0 +1,191 @@
+{
+  "_index": "history-prod-doga-sample-2016",
+  "_id": "MpQN7IcBCFfMNtJLrLCN",
+  "_version": 1,
+  "_score": 0,
+  "_source": {
+    "schemaId": 48,
+    "tableName": "sample_note",
+    "tableId": 99,
+    "isFirts": true,
+    "rowId": "200678",
+    "changedByTable": "sample_note",
+    "changedByRowId": "0",
+    "changedByDescription": "MIGRATION_USER",
+    "columns": [
+      {
+        "name": "sample_id",
+        "newValue": "148006"
+      },
+      {
+        "name": "note_description",
+        "newValue": "MUA ONAYLI"
+      },
+      {
+        "name": "note_type",
+        "newValue": "0"
+      },
+      {
+        "name": "id",
+        "newValue": "200678"
+      },
+      {
+        "name": "is_deleted",
+        "newValue": "False"
+      },
+      {
+        "name": "ChangedByUser",
+        "newValue": "-"
+      }
+    ],
+    "activityTime": 1633901043907,
+    "activityTimeStr": "2021-10-11 00:24:03",
+    "companyIdentifier": "8cf188f2-f2a6-4cf7-a950-0bceafca4ecf",
+    "correlationId": "00000000-0000-0000-0000-000000000000"
+  },
+  "fields": {
+    "changedByDescription": [
+      "MIGRATION_USER"
+    ],
+    "tableName.keyword": [
+      "sample_note"
+    ],
+    "changedByTable.keyword": [
+      "sample_note"
+    ],
+    "columns": [
+      {
+        "name": [
+          "sample_id"
+        ],
+        "newValue": [
+          "148006"
+        ],
+        "name.keyword": [
+          "sample_id"
+        ],
+        "newValue.keyword": [
+          "148006"
+        ]
+      },
+      {
+        "name": [
+          "note_description"
+        ],
+        "newValue": [
+          "MUA ONAYLI"
+        ],
+        "name.keyword": [
+          "note_description"
+        ],
+        "newValue.keyword": [
+          "MUA ONAYLI"
+        ]
+      },
+      {
+        "name": [
+          "note_type"
+        ],
+        "newValue": [
+          "0"
+        ],
+        "name.keyword": [
+          "note_type"
+        ],
+        "newValue.keyword": [
+          "0"
+        ]
+      },
+      {
+        "name": [
+          "id"
+        ],
+        "newValue": [
+          "200678"
+        ],
+        "name.keyword": [
+          "id"
+        ],
+        "newValue.keyword": [
+          "200678"
+        ]
+      },
+      {
+        "name": [
+          "is_deleted"
+        ],
+        "newValue": [
+          "False"
+        ],
+        "name.keyword": [
+          "is_deleted"
+        ],
+        "newValue.keyword": [
+          "False"
+        ]
+      },
+      {
+        "name": [
+          "ChangedByUser"
+        ],
+        "newValue": [
+          "-"
+        ],
+        "name.keyword": [
+          "ChangedByUser"
+        ],
+        "newValue.keyword": [
+          "-"
+        ]
+      }
+    ],
+    "activityTime": [
+      1633901043907
+    ],
+    "changedByRowId": [
+      "0"
+    ],
+    "tableName": [
+      "sample_note"
+    ],
+    "rowId": [
+      "200678"
+    ],
+    "activityTimeStr": [
+      "2021-10-11 00:24:03"
+    ],
+    "isFirts": [
+      true
+    ],
+    "companyIdentifier": [
+      "8cf188f2-f2a6-4cf7-a950-0bceafca4ecf"
+    ],
+    "activityTimeStr.keyword": [
+      "2021-10-11 00:24:03"
+    ],
+    "changedByDescription.keyword": [
+      "MIGRATION_USER"
+    ],
+    "rowId.keyword": [
+      "200678"
+    ],
+    "schemaId": [
+      48
+    ],
+    "tableId": [
+      99
+    ],
+    "changedByRowId.keyword": [
+      "0"
+    ],
+    "correlationId": [
+      "00000000-0000-0000-0000-000000000000"
+    ],
+    "changedByTable": [
+      "sample_note"
+    ],
+    "companyIdentifier.keyword": [
+      "8cf188f2-f2a6-4cf7-a950-0bceafca4ecf"
+    ]
+  }
+}

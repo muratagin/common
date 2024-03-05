@@ -1,0 +1,19 @@
+public enum MediaType
+{
+    PHOTO = 0,
+    MEDIA = 1,
+    DOCUMENT = 2
+}
+
+[Table("file_item")]
+public class FileItem
+{
+    public int Id { get; set; }
+    public Status Status { get; set; }
+    public string Name { get; set; }
+    public MediaType? Type { get; set; }
+    public int? TableId { get; set; }
+    public string RowId { get; set; }
+    [NotMapped]
+    public string Base64 { get; set; }
+}
