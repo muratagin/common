@@ -1,0 +1,12 @@
+{
+  "id": 3,
+  "name": "printOfferButton",
+  "label": "Poliçe Sertifika",
+  "icon": "FaBuilding",
+  "tabs": [
+    {
+      "name": "Genel",
+      "component": "PrintOfferButton"
+    }
+  ]
+}

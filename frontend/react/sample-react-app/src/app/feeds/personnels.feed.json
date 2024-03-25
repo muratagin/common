@@ -1,0 +1,296 @@
+{
+  "id": 19,
+  "name": "personnels",
+  "label": "Yetkili Kullanıcılar",
+  "filter": {
+    "withMaster": false,
+    "withoutFilter": true
+  },
+  "model": {
+    "import": false,
+    "export": false,
+    "create": true
+  },
+  "api": {
+    "url": "Users",
+    "baseName": "BaseApiName",
+    "port": 8141,
+    "params": {
+      "page": "1",
+      "pageSize": "10"
+    }
+  },
+  "tabs": [
+    {
+      "name": "Genel",
+      "content": [
+        {
+          "group": null,
+          "fields": [
+            {
+              "label": "Adı ve Soyadı",
+              "model": {
+                "create": "FullName",
+                "edit": "FullName",
+                "view": "FullName"
+              },
+              "visibility": {
+                "create": true,
+                "view": true,
+                "filter": {
+                  "show": true,
+                  "order": 0
+                }
+              },
+              "type": "text",
+              "validation": {
+                "maxlength": 100
+              },
+              "comparisonSign": "@=",
+              "icon": "",
+              "placeholder": "Ad ve soyad giriniz",
+              "required": true,
+              "requiredMessage": "Bu alan zorunludur",
+              "mask": "",
+              "invalidMessage": "",
+              "value": "",
+              "priviligeIds": []
+            },
+            {
+              "label": "T.C. Kimlik No",
+              "model": {
+                "create": "IdentityNumber",
+                "edit": "IdentityNumber",
+                "view": "IdentityNumber",
+                "filter": "IdentityNumber"
+              },
+              "visibility": {
+                "create": true,
+                "view": false,
+                "filter": {
+                  "show": false,
+                  "order": 11
+                }
+              },
+              "type": "text",
+              "icon": "buromobelexperte",
+              "placeholder": "T.C. kimlik numarası giriniz.",
+              "required": true,
+              "requiredMessage": "Bu alan zorunludur.",
+              "mask": "",
+              "invalidMessage": "",
+              "value": "",
+              "priviligeIds": []
+            },
+            {
+              "label": "E-Posta",
+              "model": {
+                "create": "Email",
+                "view": "Email"
+              },
+              "visibility": {
+                "create": true,
+                "view": false
+              },
+              "type": "email",
+              "icon": "envelope-open-text",
+              "placeholder": "E-posta giriniz.",
+              "required": true,
+              "requiredMessage": "Bu alan zorunludur",
+              "mask": "",
+              "invalidMessage": "Lütfen geçerli eposta adresi giriniz",
+              "value": "",
+              "priviligeIds": []
+            },
+            {
+              "label": "Doğum Tarihi",
+              "model": {
+                "create": "BirthDate",
+                "view": "BirthDate",
+                "filter": "BirthDate"
+              },
+              "visibility": {
+                "create": true,
+                "view": false,
+                "filter": {
+                  "show": false,
+                  "order": 0
+                }
+              },
+              "type": "date",
+              "icon": "envelope-open-text",
+              "placeholder": "Tarih giriniz",
+              "required": true,
+              "requiredMessage": "Bu alan zorunludur",
+              "mask": "99/99/9999",
+              "invalidMessage": "Lütfen geçerli bir Tarih giriniz",
+              "value": "",
+              "priviligeIds": []
+            },
+            {
+              "label": "Kullanıcı Tipi Seçiniz",
+              "model": {
+                "create": "Type",
+                "view": "Type",
+                "edit": "Type"
+              },
+              "visibility": {
+                "create": true,
+                "edit": true,
+                "view": false
+              },
+              "type": "hidden",
+              "icon": "",
+              "placeholder": "Kullanıcı Tipi Seçiniz",
+              "required": true,
+              "requiredMessage": "",
+              "mask": "",
+              "invalidMessage": "",
+              "value": 2,
+              "priviligeIds": []
+            },
+            {
+              "label": "Kullanıcı adı",
+              "model": {
+                "create": "UserName",
+                "edit": "UserName",
+                "view": "UserName"
+              },
+              "visibility": {
+                "create": false,
+                "edit": false,
+                "view": true,
+                "filter": {
+                  "show": false,
+                  "order": 8
+                }
+              },
+              "comparisonSign": "@=",
+              "type": "text",
+              "icon": "user-tie",
+              "placeholder": "Kullanıcı adı giriniz.",
+              "required": true,
+              "mask": "",
+              "invalidMessage": "",
+              "value": "",
+              "priviligeIds": []
+            },
+            {
+              "label": "Durum",
+              "model": {
+                "create": "Status",
+                "edit": "Status",
+                "view": "Status"
+              },
+              "visibility": {
+                "create": false,
+                "edit": false,
+                "view": true,
+                "filter": {
+                  "show": false,
+                  "order": 3
+                }
+              },
+              "type": "checkbox",
+              "icon": "",
+              "placeholder": "",
+              "required": false,
+              "requiredMessage": "",
+              "mask": "",
+              "invalidMessage": "",
+              "value": "",
+              "priviligeIds": []
+            },
+            {
+              "label": "Şifre Yenileme",
+              "model": {
+                "create": "Resend",
+                "filter": "Resend",
+                "view": "Resend"
+              },
+              "visibility": {
+                "create": false,
+                "edit": false,
+                "view": true
+              },
+              "action": {
+                "items": [
+                  {
+                    "label": "Şifre Yenileme",
+                    "icon": "FaRedo",
+                    "variant": "info",
+                    "target": "ajax",
+                    "dialog": {
+                      "icon": "FaInfo",
+                      "title": "Şifre Yenileme",
+                      "text": "Şifre yenilensin mi ?",
+                      "confirmButtonText": "EVET",
+                      "cancelButtonText": "HAYIR",
+                      "successText": "Şifre başarıyla yenilendi.."
+                    },
+                    "service": {
+                      "api": "tpa",
+                      "url": "Personnels/UpdatePersonnelPassword/{Id}",
+                      "port": 8082,
+                      "type": "get"
+                    }
+                  }
+                ]
+              },
+              "type": "action",
+              "icon": "FaCalendarAlt",
+              "placeholder": "",
+              "required": true,
+              "requiredMessage": "Bu alan zorunludur.",
+              "invalidMessage": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Telefon Bilgileri",
+      "content": [
+        {
+          "group": {
+            "model": "UserPhoneNumbers",
+            "title": "",
+            "type": "tableComponent",
+            "historyName": "UserPhoneNumbers",
+            "service": {
+              "api": "",
+              "url": "UserPhoneNumbers",
+              "params": {
+                "filters": "{UserId}"
+              },
+              "port": 8141
+            }
+          },
+          "fields": [
+            {
+              "label": "Telefon No",
+              "model": {
+                "create": "PhoneNumber",
+                "view": "PhoneNumber"
+              },
+              "visibility": {
+                "create": true,
+                "view": true
+              },
+              "comparisonSign": "@=",
+              "type": "number",
+              "icon": "envelope-open-text",
+              "placeholder": "Telefon no giriniz",
+              "required": true,
+              "requiredMessage": "Bu alan zorunludur",
+              "mask": "",
+              "invalidMessage": "Lütfen geçerli bir telefon no giriniz",
+              "value": "",
+              "priviligeIds": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

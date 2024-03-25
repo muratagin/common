@@ -1,0 +1,6 @@
+.tooltip-content {
+  @apply select-none rounded-md bg-gray-700 px-[15px] py-[10px] text-[15px] leading-none text-white shadow-lg will-change-[transform,opacity];
+}
+.tooltip-arrow {
+  @apply fill-gray-700;
+}

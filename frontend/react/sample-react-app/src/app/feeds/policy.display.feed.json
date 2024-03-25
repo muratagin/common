@@ -1,0 +1,359 @@
+{
+  "id": 6,
+  "name": "policy",
+  "label": "Poliçe",
+  "actionsDisplay": false,
+  "model": {
+    "import": false,
+    "export": false,
+    "create": false
+  },
+  "api": {
+    "url": "offers",
+    "baseName": "BaseApiName",
+    "port": 8141,
+    "params": {
+      "page": "1",
+      "pageSize": "10"
+    }
+  },
+  "tabs": [
+    {
+      "name": "Genel",
+      "content": [
+        {
+          "group": null,
+          "fields": [
+            {
+              "label": "Ürün",
+              "model": {
+                "create": "ProductId",
+                "view": "ProductName",
+                "edit": "ProductId",
+                "filter": "ProductId"
+              },
+              "visibility": {
+                "create": false,
+                "view": true,
+                "filter": {
+                  "show": true,
+                  "order": 4
+                }
+              },
+              "service": {
+                "api": "custom",
+                "url": "products",
+                "type": "get",
+                "port": 8141
+              },
+              "sortDisabled": true,
+              "type": "select2",
+              "placeholder": "Ürün seçiniz"
+            },
+            {
+              "label": "Alt Ürün",
+              "model": {
+                "create": "SubProductId",
+                "filter": "SubProductId",
+                "edit": "SubProductId",
+                "view": "SubProduct.Name"
+              },
+              "visibility": {
+                "create": false,
+                "view": true,
+                "filter": {
+                  "show": true,
+                  "order": 0
+                }
+              },
+              "type": "text",
+              "placeholder": "Önce ürün seçiniz"
+            },
+            {
+              "label": "Ürün Tipi",
+              "model": {
+                "create": "SubProductId",
+                "filter": "SubProductId",
+                "edit": "SubProductId",
+                "view": "SubproductName"
+              },
+              "visibility": {
+                "create": false,
+                "view": true,
+                "filter": {
+                  "show": true,
+                  "order": 2
+                }
+              },
+              "type": "select2",
+              "multiple": true,
+              "service": {
+                "url": "Lookups/GetByName",
+                "port": 8141,
+                "params": {
+                  "LookupClassName": "ProductType"
+                },
+                "type": "get"
+              },
+              "placeholder": "Ürün Tipi seçiniz"
+            },
+            {
+              "label": "Acente",
+              "model": {
+                "create": "SaleChannelName",
+                "edit": "SaleChannelName",
+                "view": "SaleChannelName"
+              },
+              "visibility": {
+                "create": false,
+                "view": true,
+                "filter": {
+                  "show": true,
+                  "order": 18
+                }
+              },
+              "type": "text",
+              "placeholder": "Acente Giriniz"
+            },
+            {
+              "label": "Acente No",
+              "model": {
+                "create": "SaleChannelId",
+                "edit": "SaleChannelId",
+                "view": "SaleChannelId"
+              },
+              "visibility": {
+                "create": false,
+                "view": true,
+                "filter": {
+                  "show": true,
+                  "order": 18
+                }
+              },
+              "type": "text",
+              "placeholder": "Acente No Giriniz"
+            },
+            {
+              "label": "Poliçe No",
+              "model": {
+                "create": "CompanyOfferNo",
+                "edit": "CompanyOfferNo",
+                "view": "CompanyOfferNo",
+                "filter": "CompanyOfferNo"
+              },
+              "visibility": {
+                "create": false,
+                "view": true,
+                "filter": {
+                  "show": true,
+                  "order": 12
+                }
+              },
+              "comparisonSign": "==",
+              "type": "text",
+              "icon": "buromobelexperte",
+              "placeholder": "Poliçe no giriniz",
+              "requiredMessage": "Bu alan zorunludur."
+            },
+            {
+              "label": "Yenileme No",
+              "model": {
+                "create": "RenewalNo",
+                "edit": "RenewalNo",
+                "view": "RenewalNo",
+                "filter": "RenewalNo"
+              },
+              "visibility": {
+                "create": false,
+                "view": true,
+                "filter": {
+                  "show": true,
+                  "order": 13
+                }
+              },
+              "type": "text",
+              "icon": "buromobelexperte",
+              "placeholder": "Yenileme no",
+              "requiredMessage": "Bu alan zorunludur."
+            },
+            {
+              "label": "Tanzim Tarihi",
+              "model": {
+                "create": "EndorsementIssueDate",
+                "view": "EndorsementIssueDate"
+              },
+              "visibility": {
+                "create": false,
+                "view": true,
+                "filter": {
+                  "show": false,
+                  "order": 0
+                }
+              },
+              "type": "date",
+              "icon": "envelope-open-text",
+              "placeholder": "Tarih giriniz",
+              "required": false,
+              "requiredMessage": "Bu alan zorunludur",
+              "mask": "99/99/9999",
+              "invalidMessage": "Lütfen geçerli bir Tarih giriniz",
+              "value": ""
+            },
+            {
+              "label": "Başlangıç Tarihi",
+              "model": {
+                "view": "StartDate",
+                "edit": "StartDate",
+                "filter": "StartDate"
+              },
+              "type": "date",
+              "visibility": {
+                "create": false,
+                "view": true,
+                "filter": {
+                  "show": true,
+                  "order": 16
+                }
+              },
+              "comparisonSign": ">=",
+              "placeholder": "Başlangıç Tarihi giriniz",
+              "requiredMessage": "",
+              "mask": "99/99/9999"
+            },
+            {
+              "label": "Bitiş Tarihi",
+              "model": {
+                "view": "EndDate",
+                "edit": "EndDate",
+                "filter": "EndDate"
+              },
+              "type": "date",
+              "visibility": {
+                "create": false,
+                "view": true,
+                "filter": {
+                  "show": true,
+                  "order": 17
+                }
+              },
+              "comparisonSign": ">=",
+              "placeholder": "Bitiş Tarihi giriniz",
+              "requiredMessage": "",
+              "mask": "99/99/9999"
+            },
+            {
+              "label": "Prim",
+              "model": {
+                "create": "GrossPremium",
+                "edit": "GrossPremium",
+                "view": "GrossPremium",
+                "filter": "GrossPremium"
+              },
+              "sortDisabled": true,
+              "type": "decimal",
+              "visibility": {
+                "create": false,
+                "view": true,
+                "filter": {
+                  "show": false,
+                  "order": 0
+                }
+              },
+              "placeholder": "Prim Giriniz",
+              "required": false
+            },
+            {
+              "label": "Sigorta Ettiren",
+              "model": {
+                "create": "InsurerName",
+                "view": "InsurerName",
+                "edit": "InsurerName",
+                "filter": "InsurerName"
+              },
+              "visibility": {
+                "create": false,
+                "view": true,
+                "filter": {
+                  "show": true,
+                  "order": 14
+                }
+              },
+              "type": "text",
+              "placeholder": "Sigorta Ettiren Seçiniz",
+              "requiredMessage": ""
+            },
+            {
+              "label": "Sigorta Ettiren TCKN/VKN",
+              "model": {
+                "create": "InsurerInfo",
+                "view": "InsurerInfo",
+                "filter": "InsurerInfo"
+              },
+              "visibility": {
+                "create": false,
+                "view": true,
+                "filter": {
+                  "show": true,
+                  "order": 15
+                }
+              },
+              "sortDisabled": true,
+              "type": "number",
+              "icon": "buromobelexperte",
+              "placeholder": "Sigorta Ettiren TCKN/VKN giriniz",
+              "validation": {
+                "maxlength": "11"
+              },
+              "value": ""
+            },
+            {
+              "label": "Tipi",
+              "model": {
+                "create": "SubProductType",
+                "edit": "SubProductType",
+                "view": "SubProductType",
+                "filter": "SubProductType"
+              },
+              "visibility": {
+                "create": false,
+                "view": true,
+                "filter": {
+                  "show": true,
+                  "order": 1
+                }
+              },
+              "type": "select2",
+              "service": {
+                "url": "Lookups/GetByName",
+                "port": 8141,
+                "params": {
+                  "lookupClassName": "SubProductType"
+                },
+                "type": "get"
+              },
+              "placeholder": "Tipi seçiniz",
+              "requiredMessage": "Bu alan zorunludur",
+              "value": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Zeyil",
+      "component": "EndorsementViewTab"
+    },
+    {
+      "name": "Sigortalı",
+      "component": "InsuredViewTab"
+    },
+    {
+      "name": "Basımlar",
+      "component": "PrintsViewTab"
+    },
+    {
+      "name": "Ödeme",
+      "component": "PaymentViewTab"
+    }
+  ]
+}

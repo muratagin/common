@@ -1,0 +1,299 @@
+{
+  "id": 18,
+  "name": "packages",
+  "label": "Paket",
+  "model": {
+    "import": false,
+    "export": false,
+    "create": true
+  },
+  "filter": {
+    "withMaster": false,
+    "withoutFilter": true
+  },
+  "api": {
+    "url": "packages",
+    "baseName": "BaseApiName",
+    "port": 8141,
+    "params": {
+      "page": "1",
+      "pageSize": "10"
+    }
+  },
+  "tabs": [
+    {
+      "name": "Genel",
+      "content": [
+        {
+          "group": null,
+          "fields": [
+            {
+              "label": "Paket Id",
+              "model": {
+                "create": "Id",
+                "view": "Id",
+                "edit": "Id",
+                "filter": "Id"
+              },
+              "visibility": {
+                "create": false,
+                "edit": false,
+                "view": true,
+                "filter": {
+                  "show": true,
+                  "order": 0
+                }
+              },
+              "type": "number",
+              "validation": {
+                "maxlength": "20"
+              },
+              "withoutLetterValue": true,
+              "icon": "fax",
+              "placeholder": "Paket id giriniz",
+              "mask": "",
+              "invalidMessage": "",
+              "value": "",
+              "requiredMessage": "Bu alan zorunludur.",
+              "required": true
+            },
+            {
+              "label": "Paket Adı",
+              "model": {
+                "create": "Name",
+                "view": "Name"
+              },
+              "visibility": {
+                "create": true,
+                "view": true,
+                "filter": {
+                  "show": true,
+                  "order": 1
+                }
+              },
+              "comparisonSign": "@=",
+              "validation": {
+                "maxlength": "100"
+              },
+              "type": "text",
+              "icon": "address-card",
+              "placeholder": "Paket adı giriniz",
+              "mask": "",
+              "required": true,
+              "requiredMessage": "Bu alan zorunludur.",
+              "invalidMessage": "",
+              "value": ""
+            },
+            {
+              "label": "Ürün",
+              "model": {
+                "create": "ProductId",
+                "edit": "ProductId",
+                "filter": "ProductId",
+                "view": "SubProduct.Product.Name"
+              },
+              "visibility": {
+                "create": true,
+                "view": true,
+                "filter": {
+                  "show": true,
+                  "order": 2
+                }
+              },
+              "service": {
+                "api": "custom",
+                "url": "products",
+                "type": "get",
+                "port": 8141
+              },
+              "multiple": false,
+              "multipleFilter": false,
+              "type": "select2",
+              "icon": "",
+              "placeholder": "Ürün seçiniz",
+              "required": true,
+              "requiredMessage": "Bu alan zorunludur",
+              "mask": ""
+            },
+            {
+              "label": "Alt Ürün",
+              "model": {
+                "create": "SubProductId",
+                "edit": "SubProductId",
+                "filter": "SubProductId",
+                "view": "SubProduct.Name"
+              },
+              "visibility": {
+                "create": true,
+                "view": true,
+                "filter": {
+                  "show": true,
+                  "order": 2
+                }
+              },
+              "service": {
+                "api": "custom",
+                "url": "subproducts?filters={ProductId}",
+                "type": "get",
+                "port": 8141
+              },
+              "multiple": false,
+              "multipleFilter": false,
+              "required": true,
+              "requiredMessage": "Bu alan zorunludur",
+              "type": "select2",
+              "icon": "",
+              "placeholder": "Önce ürün seçiniz",
+              "mask": ""
+            },
+            {
+              "label": "Alt Ürün Tipi",
+              "model": {
+                "create": "SubProductType",
+                "edit": "SubProductType",
+                "view": "SubProduct.Type.Text",
+                "filter": "SubProduct.Type"
+              },
+              "visibility": {
+                "create": false,
+                "edit": false,
+                "view": true,
+                "filter": {
+                  "show": true,
+                  "order": 2
+                }
+              },
+              "type": "select2",
+              "service": {
+                "url": "Lookups/GetByName",
+                "port": 8141,
+                "params": {
+                  "LookupClassName": "SubProductType"
+                },
+                "type": "get"
+              },
+              "icon": "",
+              "placeholder": "Tipi seçiniz",
+              "required": true,
+              "requiredMessage": "Bu alan zorunludur",
+              "mask": "",
+              "invalidMessage": "",
+              "value": null,
+              "priviligeIds": []
+            },
+            {
+              "label": "Şirket Paket Kodu",
+              "model": {
+                "create": "CompanyPackageNo",
+                "view": "CompanyPackageNo",
+                "edit": "CompanyPackageNo",
+                "filter": "CompanyPackageNo"
+              },
+              "visibility": {
+                "create": true,
+                "view": true,
+                "filter": {
+                  "show": true,
+                  "order": 4
+                }
+              },
+              "type": "text",
+              "validation": {
+                "maxlength": "20"
+              },
+              "withoutLetterValue": true,
+              "icon": "fax",
+              "placeholder": "Şirket paket kodu giriniz",
+              "mask": "",
+              "invalidMessage": "",
+              "value": "",
+              "requiredMessage": "Bu alan zorunludur.",
+              "required": true
+            },
+            {
+              "label": "Başlangıç Tarihi",
+              "model": {
+                "create": "StartDate",
+                "view": "StartDate"
+              },
+              "visibility": {
+                "create": true,
+                "view": true,
+                "filter": {
+                  "show": false,
+                  "order": 0
+                }
+              },
+              "type": "date",
+              "icon": "FaEnvelopeOpenText",
+              "placeholder": "Tarih giriniz",
+              "required": true,
+              "requiredMessage": "Bu alan zorunludur",
+              "mask": "99/99/9999",
+              "invalidMessage": "Lütfen geçerli bir Tarih giriniz",
+              "value": "",
+              "defaultValueNow": true,
+              "priviligeIds": []
+            },
+            {
+              "label": "Bitiş Tarihi",
+              "model": {
+                "create": "EndDate",
+                "view": "EndDate"
+              },
+              "visibility": {
+                "create": true,
+                "view": true,
+                "filter": {
+                  "show": false,
+                  "order": 0
+                }
+              },
+              "type": "date",
+              "icon": "FaEnvelopeOpenText",
+              "placeholder": "Tarih giriniz",
+              "required": true,
+              "requiredMessage": "Bu alan zorunludur",
+              "mask": "99/99/9999",
+              "invalidMessage": "Lütfen geçerli bir Tarih giriniz",
+              "initialValue": "2099-01-01",
+              "priviligeIds": []
+            },
+            {
+              "label": "Satış Durumu",
+              "action": true,
+              "model": {
+                "create": "IsOpenToSale",
+                "view": "IsOpenToSale"
+              },
+              "visibility": {
+                "create": false,
+                "edit": false,
+                "view": true,
+                "filter": {
+                  "show": false,
+                  "order": 1
+                }
+              },
+              "laterRefresh": true,
+              "service": {
+                "url": "Packages/UpdateOpenToSale",
+                "port": 8141
+              },
+              "type": "openToSaleCheckboxButton",
+              "icon": "",
+              "mask": "",
+              "invalidMessage": "",
+              "value": "",
+              "priviligeIds": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Plan",
+      "component": "PlanViewTab"
+    }
+  ]
+}

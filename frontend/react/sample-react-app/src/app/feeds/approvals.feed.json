@@ -1,0 +1,151 @@
+{
+  "id": 22,
+  "name": "approvals",
+  "label": "Onay",
+  "model": {
+    "import": false,
+    "export": false
+  },
+  "filter": {
+    "withMaster": true,
+    "withoutFilter": true
+  },
+  "api": {
+    "url": "Approvals",
+    "port": 8141,
+    "params": {
+      "page": "1",
+      "pageSize": "10"
+    }
+  },
+  "tabs": [
+    {
+      "name": "Genel",
+      "content": [
+        {
+          "group": null,
+          "fields": [
+            {
+              "type": "text",
+              "label": "Onay Adı",
+              "placeholder": "Onay adı giriniz.",
+              "required": true,
+              "textCaseStatus": "ignore",
+              "requiredMessage": "Onay adı alanı girilmesi zorunludur.",
+              "comparisonSign": "@=",
+              "model": {
+                "create": "Name",
+                "edit": "Name",
+                "view": "Name",
+                "filter": "Name"
+              },
+              "visibility": {
+                "edit": true,
+                "create": true,
+                "view": true,
+                "filter": {
+                  "show": true,
+                  "order": 1
+                }
+              }
+            },
+            {
+              "label": "İçerik",
+              "model": {
+                "create": "Content",
+                "view": "Content"
+              },
+              "visibility": {
+                "create": false,
+                "edit": false,
+                "view": true
+              },
+              "action": {
+                "items": [
+                  {
+                    "icon": "FaSearch",
+                    "label": "Görüntüle",
+                    "variant": "info",
+                    "appearance": "btn-green",
+                    "mode": "component",
+                    "component": {
+                      "name": "ApprovalContentDetails",
+                      "customModal": true
+                    },
+                    "target": "popup",
+                    "model": "component"
+                  }
+                ]
+              },
+              "type": "action",
+              "icon": "",
+              "placeholder": "",
+              "required": false,
+              "requiredMessage": "",
+              "mask": "",
+              "invalidMessage": "",
+              "value": ""
+            },
+            {
+              "label": "Onay Tipi",
+              "model": {
+                "create": "Type",
+                "edit": "Type",
+                "view": "Type",
+                "filter": "Type"
+              },
+              "visibility": {
+                "create": true,
+                "edit": true,
+                "view": false,
+                "filter": {
+                  "show": true,
+                  "order": 3
+                }
+              },
+              "type": "select2",
+              "multiple": false,
+              "service": {
+                "url": "Lookups/GetByName",
+                "port": 8141,
+                "params": {
+                  "LookupClassName": "ApprovalType"
+                },
+                "type": "get"
+              },
+              "icon": "building",
+              "placeholder": "Tip Seçiniz",
+              "required": true,
+              "requiredMessage": "Bu alan zorunludur.",
+              "value": null
+            },
+            {
+              "type": "tinyeditor",
+              "label": "İçerik",
+              "placeholder": "İçerik giriniz.",
+              "required": false,
+              "requiredMessage": "İçerik alanı girilmesi zorunludur.",
+              "comparisonSign": "@=",
+              "model": {
+                "create": "Content",
+                "edit": "Content",
+                "view": "Content",
+                "filter": "Content"
+              },
+              "textCaseStatus": "ignore",
+              "visibility": {
+                "edit": true,
+                "create": true,
+                "view": false,
+                "filter": {
+                  "show": false,
+                  "order": 2
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

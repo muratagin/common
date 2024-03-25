@@ -1,0 +1,198 @@
+/*Form Elements CSS Start*/
+
+.form-pristine .field-invalid .error {
+  @apply hidden;
+}
+
+.form-pristine,
+.form-dirty {
+  @apply w-full;
+}
+
+.form-pristine .group-title,
+.form-dirty .group-title {
+  @apply mb-0.5 mt-5 text-xl font-semibold text-navy-blue;
+}
+
+.form-field {
+  @apply relative !min-w-[120px] p-1.5;
+}
+
+.form-field span.error {
+  @apply mx-0.5 mb-1.5 block text-sm text-persimmon;
+}
+
+.form-field label {
+  @apply mb-2 block text-xs font-semibold text-black;
+}
+
+.form-field .radio-group {
+  @apply float-left mb-0 ml-0 mr-1 mt-1 flex items-center;
+}
+
+.form-control {
+  @apply block h-[calc(1.5em_+_0.75rem_+_2px)] w-full rounded border border-solid border-[#ced4da] bg-white bg-clip-padding px-3 py-1.5 text-base font-normal leading-normal text-[#495057];
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-input {
+  @apply h-10 w-full justify-center rounded-md border border-solid bg-white px-2.5;
+}
+
+.form-input::placeholder {
+  @apply text-sm font-normal text-black text-opacity-50;
+}
+.form-control:disabled,
+.form-control[readonly] {
+  @apply bg-[#e9ecef];
+}
+
+.form-input:focus {
+  @apply border-primary bg-white outline-none  outline-0 transition-all duration-700;
+}
+
+.input-invalid {
+  @apply border-persimmon;
+}
+
+.file-field .progress {
+  @apply mt-1;
+}
+
+/*onoff switch start*/
+
+.inline-block {
+  @apply !inline-block;
+}
+
+.onoffswitch {
+  @apply relative top-8 w-[50px] select-none;
+}
+
+.onoffswitch.labeled {
+  @apply w-[46px];
+}
+
+.onoffswitch.labeled .onoffswitch-inner:before {
+  @apply pl-1.5 content-['On'];
+}
+
+.onoffswitch.labeled .onoffswitch-inner:after {
+  @apply pr-1.5 content-['Off'];
+}
+
+.onoffswitch.labeled .onoffswitch-switch {
+  @apply right-5;
+}
+
+.onoffswitch-label {
+  @apply block cursor-pointer overflow-hidden rounded-[50px];
+}
+
+.onoffswitch-checkbox {
+  @apply hidden;
+}
+
+.onoffswitch-switch {
+  @apply absolute right-[29.5px] block h-[19.5px] w-[19.5px] rounded-[50px] bg-white transition-all duration-200 ease-in;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  @apply ml-0;
+}
+.onoffswitch-inner {
+  @apply -ml-[100%] block w-[200%] transition-all duration-200 ease-in;
+}
+
+.onoffswitch.blue .onoffswitch-inner:before {
+  @apply bg-curious-blue;
+}
+
+.onoffswitch-inner:before {
+  @apply bg-black pl-2.5  text-white content-[''];
+}
+
+.onoffswitch-inner:before,
+.onoffswitch-inner:after {
+  @apply float-left box-border h-5 w-1/2 rounded-[50px] bg-primary p-0 text-2xl text-white;
+}
+.onoffswitch.ligther .onoffswitch-inner:before {
+  @apply border-[1px] border-very-light-gray bg-white;
+}
+
+.onoffswitch.ligther .onoffswitch-inner:after {
+  @apply border-[1px] border-very-light-gray bg-[#eee];
+}
+
+.ligther .onoffswitch-switch {
+  @apply border-[1px] border-summer-sky bg-summer-sky;
+}
+.onoffswitch-inner:after {
+  @apply bg-black bg-opacity-80 pr-2 text-right text-[#999] content-[''];
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  @apply right-0;
+}
+
+.switch .onoffswitch {
+  @apply m-2.5;
+}
+
+.left-label {
+  @apply absolute top-[10px] m-0 ml-[3px] mr-1  !text-xs !font-semibold !text-inherit;
+}
+/*onoff switch end*/
+
+/*Select 2 Start*/
+.react-select-container-ergo {
+  @apply pt-0;
+}
+
+.react-select-placeholder {
+  @apply max-w-[175px] overflow-hidden overflow-ellipsis whitespace-nowrap text-sm 2xl:max-w-full;
+}
+
+.react-select__menu {
+  @apply z-[99999];
+}
+.react-select__control {
+  @apply h-10 rounded-md border-[0.5px] border-b-[1px] text-xs shadow-none;
+}
+
+.react-select__placeholder {
+  @apply !text-sm font-normal text-black text-opacity-50 text-ellipsis overflow-hidden whitespace-nowrap;
+}
+.react-select__option {
+  @apply text-xs;
+}
+.react-select__option--is-selected {
+  @apply bg-[#1a619a];
+}
+
+.react-select__indicator-separator {
+  @apply !hidden;
+}
+
+.react-select--is-disabled > .react-select__control {
+  @apply !bg-gray-200;
+}
+
+.required:after {
+  @apply absolute -left-[0.1rem] z-10 text-danger content-["*"];
+}
+
+/*Select 2 End*/
+
+/*CustomTextButton Start*/
+.custom-text-btn {
+  @apply btn btn-light rounded-b-none rounded-t-none border-[1px] border-solid border-[#ced4da] shadow-none drop-shadow-none last-of-type:rounded-br-md last-of-type:rounded-tr-md;
+}
+.custom-text-input {
+  @apply !rounded-br-none !rounded-tr-none;
+}
+/*CustomTextButton End*/
+/*Form Elements CSS End*/
+
+.react-select-input__placeholder {
+  @apply text-ellipsis overflow-hidden whitespace-nowrap;
+}

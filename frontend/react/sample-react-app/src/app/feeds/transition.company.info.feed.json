@@ -1,0 +1,112 @@
+{
+  "id": 20,
+  "name": "companyinformation",
+  "label": "Geçiş Şirket Bilgisi",
+  "model": {
+    "import": false,
+    "export": false,
+    "create": false
+  },
+  "filter": {
+    "withMaster": false,
+    "withoutFilter": true
+  },
+  "api": {
+    "url": "TransitionCompanyInformations",
+    "baseName": "BaseApiName",
+    "port": 8141,
+    "params": {
+      "page": "1",
+      "pageSize": "10"
+    }
+  },
+  "tabs": [
+    {
+      "name": "Genel",
+      "content": [
+        {
+          "group": null,
+          "fields": [
+            {
+              "label": "Geçiş Şirket Adı",
+              "model": {
+                "create": "CompanyName",
+                "edit": "CompanyName",
+                "view": "CompanyName"
+              },
+              "visibility": {
+                "create": false,
+                "edit": true,
+                "view": true,
+                "filter": {
+                  "show": true,
+                  "order": 2
+                }
+              },
+              "type": "text",
+              "icon": "envelope-open-text",
+              "placeholder": "Geçiş şirketi giriniz",
+              "required": true,
+              "requiredMessage": "Bu alan zorunludur",
+              "mask": "",
+              "value": "",
+              "priviligeIds": []
+            },
+            {
+              "label": "Geçiş Şirketi E-Posta Adresi",
+              "model": {
+                "create": "Email",
+                "view": "Email"
+              },
+              "visibility": {
+                "create": true,
+                "edit": true,
+                "view": true,
+                "filter": {
+                  "show": true,
+                  "order": 2
+                }
+              },
+              "type": "email",
+              "icon": "envelope-open-text",
+              "placeholder": "Geçiş şirketi e-posta giriniz.",
+              "required": true,
+              "requiredMessage": "Bu alan zorunludur",
+              "mask": "",
+              "invalidMessage": "Lütfen geçerli eposta adresi giriniz",
+              "value": "",
+              "priviligeIds": []
+            },
+            {
+              "label": "Durumu",
+              "action": true,
+              "model": {
+                "create": "IsActive",
+                "view": "IsActive"
+              },
+              "visibility": {
+                "create": false,
+                "view": true,
+                "filter": {
+                  "show": false,
+                  "order": 0
+                }
+              },
+              "service": {
+                "url": "TransitionCompanyInformations/UpdateStatus",
+                "port": 8141
+              },
+              "laterRefresh": true,
+              "type": "openToSaleCheckboxButton",
+              "icon": "",
+              "mask": "",
+              "invalidMessage": "",
+              "value": "",
+              "priviligeIds": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

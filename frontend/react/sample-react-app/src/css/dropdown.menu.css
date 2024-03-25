@@ -1,0 +1,7 @@
+.dropdown-content {
+  @apply flex flex-col  rounded-xl bg-white p-2 shadow-lg;
+}
+
+.dropdown-content > div {
+  @apply flex cursor-pointer items-center gap-x-2 rounded-lg p-1 outline-none hover:bg-white-smoke;
+}
