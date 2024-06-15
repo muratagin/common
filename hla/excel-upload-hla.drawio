@@ -1,0 +1,140 @@
+<mxfile host="app.diagrams.net" modified="2024-06-15T11:07:43.296Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="n88xWPTQ9lbF-nnttcwA" version="24.5.4" type="device">
+  <diagram name="Sayfa -1" id="Id7xuNpCygms_7nZgnj9">
+    <mxGraphModel dx="1461" dy="896" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="rkw44CQHJ62osZa49O70-1" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;rotation=-90;textDirection=vertical-lr;" vertex="1" parent="1">
+          <mxGeometry x="479.05" y="583.76" width="246.87" height="319.37" as="geometry" />
+        </mxCell>
+        <mxCell id="rkw44CQHJ62osZa49O70-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="rkw44CQHJ62osZa49O70-2" target="rkw44CQHJ62osZa49O70-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rkw44CQHJ62osZa49O70-5" value="Excel Upload" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rkw44CQHJ62osZa49O70-4">
+          <mxGeometry x="0.2923" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rkw44CQHJ62osZa49O70-2" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="541.24" y="50" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rkw44CQHJ62osZa49O70-3" value="React Web Application" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;" vertex="1" parent="1">
+          <mxGeometry x="423.74" y="210" width="265" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rkw44CQHJ62osZa49O70-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=10;exitDy=70;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="rkw44CQHJ62osZa49O70-6" target="rkw44CQHJ62osZa49O70-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rkw44CQHJ62osZa49O70-30" value="Publish Chunk for Insertion" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rkw44CQHJ62osZa49O70-29">
+          <mxGeometry x="-0.2997" y="-2" relative="1" as="geometry">
+            <mxPoint x="-3" y="32" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rkw44CQHJ62osZa49O70-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=142.5;exitDy=80;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="rkw44CQHJ62osZa49O70-6" target="rkw44CQHJ62osZa49O70-26">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="566.74" y="585" />
+              <mxPoint x="818.74" y="585" />
+              <mxPoint x="818.74" y="745" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rkw44CQHJ62osZa49O70-35" value="Publish Persistence of Chunk" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rkw44CQHJ62osZa49O70-34">
+          <mxGeometry x="-0.311" y="4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rkw44CQHJ62osZa49O70-6" value="Batch Microservice (Spring Boot - Java)" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;" vertex="1" parent="1">
+          <mxGeometry x="423.74" y="360" width="265" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rkw44CQHJ62osZa49O70-9" value="React Web Application only checks extension of file to upload is valid for Excel (xls or xlsx)" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="1">
+          <mxGeometry x="178.74" y="140" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="rkw44CQHJ62osZa49O70-10" value="Batch MS has a PostMapping REST endpoint to get excel file with batchInfoId and returns a batchProcess object as response that includes id, uploadTime, status, totalRowCount and estimatedTimeToFinish.&lt;br&gt;Batch MS will create a batch process and will calculate an estimation time from bulkInfo. Process will be divides into chunks that includes 100 rows in each. Then it will publish each chunk to the topic which is in bulkInfo.&lt;div&gt;Batch MS will subscribe to result topic of chunk insertion and will update chunk table and error log results of it. Then it will check all chunks are finished or not. If all chunks are finished it will publish persist topic and get result of persistence of chunk.&lt;br&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="1">
+          <mxGeometry x="28.740000000000002" y="280" width="290" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="rkw44CQHJ62osZa49O70-11" value="Batch MS has a GetMapping REST endpoint to get status of batchProcess via id on path variable. Endpoint responses batchProcess object that includes id, uploadTime, status, totalRowCount, estimatedTimeToFinish, finishTime (null if not finished)." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="1">
+          <mxGeometry x="788.74" y="180" width="290" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="rkw44CQHJ62osZa49O70-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=30;exitPerimeter=0;entryX=0;entryY=0.475;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="rkw44CQHJ62osZa49O70-3" target="rkw44CQHJ62osZa49O70-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rkw44CQHJ62osZa49O70-15" value="Excel File Post" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rkw44CQHJ62osZa49O70-14">
+          <mxGeometry x="-0.1313" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rkw44CQHJ62osZa49O70-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=265;exitDy=50;exitPerimeter=0;entryX=0;entryY=0;entryDx=265;entryDy=50;entryPerimeter=0;" edge="1" parent="1" source="rkw44CQHJ62osZa49O70-3" target="rkw44CQHJ62osZa49O70-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rkw44CQHJ62osZa49O70-17" value="Cancel Batch Process" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rkw44CQHJ62osZa49O70-16">
+          <mxGeometry x="-0.3474" y="-1" relative="1" as="geometry">
+            <mxPoint x="11" y="18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rkw44CQHJ62osZa49O70-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=142.5;exitDy=80;exitPerimeter=0;entryX=0.54;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="rkw44CQHJ62osZa49O70-3" target="rkw44CQHJ62osZa49O70-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rkw44CQHJ62osZa49O70-19" value="Get Status of Batch Process" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rkw44CQHJ62osZa49O70-18">
+          <mxGeometry x="-0.1501" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rkw44CQHJ62osZa49O70-20" value="Batch MS has a DeleteMapping REST endpoint to cancel batchProcess if it is unfinished. Endpoint responses success message if it is cancelled or failed message if it is unsuccessful to cancel with id of batchProcess." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="1">
+          <mxGeometry x="788.74" y="350" width="290" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="rkw44CQHJ62osZa49O70-22" value="KAFKA" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="578.74" y="620" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="rkw44CQHJ62osZa49O70-23" value="zone-chunk-insert-topic" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="507.18" y="650" width="211.56" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="rkw44CQHJ62osZa49O70-24" value="zone-chunk-insert-result-topic" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="507.18" y="690" width="211.56" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="rkw44CQHJ62osZa49O70-25" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="608.24" y="856" as="sourcePoint" />
+            <mxPoint x="608.74" y="810" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rkw44CQHJ62osZa49O70-26" value="zone-chunk-persist-topic" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="507.18" y="730" width="211.56" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="rkw44CQHJ62osZa49O70-27" value="zone-chunk-persist-result-topic" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="507.18" y="770" width="211.56" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="rkw44CQHJ62osZa49O70-28" value="Zone Microservice (Spring Boot - Java)" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;" vertex="1" parent="1">
+          <mxGeometry x="421.24" y="970" width="265" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rkw44CQHJ62osZa49O70-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=60;entryPerimeter=0;" edge="1" parent="1" source="rkw44CQHJ62osZa49O70-24" target="rkw44CQHJ62osZa49O70-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="338.74" y="705" />
+              <mxPoint x="338.74" y="520" />
+              <mxPoint x="423.74" y="520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rkw44CQHJ62osZa49O70-33" value="Result of Chunk Insertion" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rkw44CQHJ62osZa49O70-32">
+          <mxGeometry x="-0.1478" y="-1" relative="1" as="geometry">
+            <mxPoint x="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rkw44CQHJ62osZa49O70-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="rkw44CQHJ62osZa49O70-27" target="rkw44CQHJ62osZa49O70-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="858.74" y="785" />
+              <mxPoint x="858.74" y="540" />
+              <mxPoint x="688.74" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rkw44CQHJ62osZa49O70-37" value="Result of Chunk Persistence" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rkw44CQHJ62osZa49O70-36">
+          <mxGeometry x="0.4992" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
